@@ -1,4 +1,4 @@
-
+/*棒の表示に関する事。*/
 let a=document.getElementById('squares');   //追加する親
 let b=new Array(n); //四角形のノードたち
 
@@ -22,7 +22,6 @@ for(let i=0; i<n; i++){
     b[i].setAttribute('id','square'+String(i+1));
     //*以下の１文でCSSを追加。
     //!同じ属性に連続で使用すると「上書き」される。
-    //?見た目良くなる方法はありそう？
     b[i].setAttribute('style','margin:10px;width:'+String(20*c[i])+'px;height:20px;background-color:rgb(0,0,0);');
     //*接合
     a.appendChild(b[i]);

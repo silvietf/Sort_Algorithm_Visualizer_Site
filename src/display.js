@@ -3,7 +3,7 @@ let a=document.getElementById('squares');   //追加する親
 let b=new Array(n); //四角形のノードたち
 
 let d="Array={";    //サイトに表示する棒の大きさ
-
+https://github.com/silvietf/-
 //*サイトに配列の値を表示する
 for (let i = 0; i < n-1; i++) {
     d=d+String(c[i])+",";

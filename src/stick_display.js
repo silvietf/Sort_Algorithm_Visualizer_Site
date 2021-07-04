@@ -10,7 +10,7 @@ for (let i = 0; i < n-1; i++) {
 }
 d=d+String(c[n-1])+"}";
 //*サイトに今回の配列の大きさを表示。
-let e=document.createElement('h1');
+let e=document.createElement('div');
 e.textContent=d;
 a.appendChild(e);
 

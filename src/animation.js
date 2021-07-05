@@ -37,11 +37,16 @@ const stick_animation=async()=>{
         //赤色表示
         let me = document.getElementById('square' + String(i + 1));
         change(me, '#dc143c');
-        for (let j = 1; j < n; j++) {
+        for (let j = 0; j < n; j++) {
             let target = document.getElementById('square' + String(j + 1)); //!j=n-1のときにtargetが振り切れる可能性あり！
-            await wait(1000);
-            console.log("target.id="+target.id);
-            change(target, '#00bfff');
+            if (j!=i) {
+                await wait(100);
+                change(target, '#00bfff');
+            }
+        }
+        for(let j=0; j<n; j++){
+            let clear=document.getElementById('square'+String(j+1));
+            change(clear,'#000000');
         }
     }
 }

@@ -6,3 +6,4 @@ for (let i = 0; i < n; i++) {
     //!0の値だと棒が表示されないので、今回はceil・・・切り上げを使用。
     c[i]=Math.ceil(Math.random()*10);
 }
+

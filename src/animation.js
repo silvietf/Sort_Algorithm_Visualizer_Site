@@ -15,44 +15,23 @@ function change_array(origin_array_num, target_array_num) {
     c[origin_array_num] = c[target_array_num];
     c[target_array_num] = t;
 }
-//animejsで入れ替えアニメーションを起こす関数
-function change_stick(origin, target, origin_place, target_place) {
-    let distance = target_place - origin_place;
-    anime({
-        targets: '#' + origin.id,
-        translateY: 30.5 * distance //この値だときれいに収まる。
-    });
-    anime({
-        targets: '#' + target.id,
-        translateY: -29.5 * distance //この値だときれいに収まる。
-    })
+//animejsで入れ替えアニメーションを起こす関数→今回は棒の切り替えで終わり
+function change_stick(origin, target) {
+    let t=origin.style.width;
+    origin.style.width=target.style.width;
+    target.style.width=t;
+
 }
-//idを入れ替える関数
-function change_id(origin, target) {
-    let t = origin.id;
-    console.log(origin.id);
-    origin.id = target.id;
-    console.log(target.id);
-    target.id = t;
-}
-//! 上３つの関数の順序はarray⇒stick→id
 
 let s = 'on';
-// anime({
-//     targets:'#square5',
-//     translateY:-29.5*4
-// });
-// anime({
-//     targets:'#square1',
-//     translateY:30.5*4
-// });
+
 //*バブルソート
 /**メモ
  * アロー演算子：引数=>処理
  * !await関数はasync内でしか使えない
  * !setIntervalの中にsetIntervalは使えない。
  */
-const stick_animation = async () => {
+const stick_animation_bubble = async () => {
     for (let i = 0; i < n; i++) {
         //赤色表示
         let me = document.getElementById('square' + String(i + 1));
@@ -63,15 +42,15 @@ const stick_animation = async () => {
             //!await wait(100)をここに挟むと色blue⇒black切り替えが一瞬で行われるので注意！！
             change_color(target, '#00bfff');
             await wait(500);
-
+            console.log(me);
             if (c[i] > c[j] && s == 'on') {
 
                 change_color(me, '#00ff00');
                 change_color(target, '#00ff00');
                 change_array(i, j);
-                change_stick(me, target, i, j);
-                wait(100);
-                change_id(me, target);
+                await wait(250);
+                change_stick(me, target);
+                await wait(250);
                 change_color(me, '#dc143c');
                 change_color(target, '#00bfff');
 
@@ -89,4 +68,4 @@ const stick_animation = async () => {
         }
     }
 }
-stick_animation();
+stick_animation_bubble();

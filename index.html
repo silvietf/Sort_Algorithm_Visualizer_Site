@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <!--*見た目-->
+    <!--*ヘッダー-->
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
@@ -29,10 +29,14 @@
             </ul>
         </header>
     </div>
+
     <!--*棒部分-->
     <div id="squares">
-        <!--main.jsで棒やArrayの文字を追加-->
+        <!--main.jsなどで棒やArrayの文字を追加-->
     </div>
+    <!--*スライダー（ソートのスピード変更）-->
+    <label for="customRange1" class="form-label">ソートの速さ（最小：1倍速、最大：2倍速）</label>
+    <input type="range" class="form-range" id="customRange1" min="1" max="2" step="0.1">
     <script src="./lib/animejs/lib/anime.min.js"></script>
     <script src="./src/main.js"></script>
     <script src="./src/stick_display.js"></script>

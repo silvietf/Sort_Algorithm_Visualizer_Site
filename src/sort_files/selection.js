@@ -12,12 +12,13 @@ const stick_animation_selection = async () => {
             await wait(500);
             console.log(me);
             if (c[i] > c[j]) {
-
                 change_color(me, '#00ff00');
                 change_color(target, '#00ff00');
                 change_array(i, j);
                 await wait(250);
+
                 change_stick(me, target);
+
                 await wait(250);
                 change_color(me, '#dc143c');
                 change_color(target, '#00bfff');

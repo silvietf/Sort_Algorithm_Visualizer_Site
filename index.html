@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
+    <link href="./lib/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
 
+<body>
+    <!--*見た目-->
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" /></svg>
+                <span class="fs-4">Simple header</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Bubble</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Selection</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Shell</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Quick</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Merge</a></li>
+            </ul>
+        </header>
+    </div>
+    <!--*棒部分-->
     <div id="squares">
         <!--main.jsで棒やArrayの文字を追加-->
     </div>
@@ -17,5 +38,7 @@
     <script src="./src/stick_display.js"></script>
     <script src="./src/animation.js"></script>
     <script src="./src/slider.js"></script>
+
 </body>
+
 </html>

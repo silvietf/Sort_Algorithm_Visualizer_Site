@@ -1,10 +1,5 @@
-/*バブルソート*/
-/**メモ
- * アロー演算子：引数=>処理
- * !await関数はasync内でしか使えない
- * !setIntervalの中にsetIntervalは使えない。
- */
-const stick_animation_bubble = async () => {
+/*選択ソート*/
+const stick_animation_selection = async () => {
     for (let i = 0; i < n; i++) {
         //赤色表示
         let me = document.getElementById('square' + String(i + 1));
@@ -41,4 +36,4 @@ const stick_animation_bubble = async () => {
         }
     }
 }
-stick_animation_bubble();
+stick_animation_selection();

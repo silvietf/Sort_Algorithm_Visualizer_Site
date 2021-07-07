@@ -2,18 +2,23 @@
 let a=document.getElementById('squares');   //追加する親
 let b=new Array(n); //四角形のノードたち
 
-let d="Array={";    //サイトに表示する棒の大きさ
-https://github.com/silvietf/-
-//*サイトに配列の値を表示する
-for (let i = 0; i < n-1; i++) {
-    d=d+String(c[i])+",";
-}
-d=d+String(c[n-1])+"}";
-//*サイトに今回の配列の大きさを表示。
-let e=document.createElement('div');
-e.textContent=d;
-a.appendChild(e);
 
+//*サイトに配列の値を表示する（grid形式）
+let div_container=document.createElement('div');
+div_container.setAttribute('class',"container");
+a.appendChild(div_container);
+let div_row=document.createElement('div');
+div_row.setAttribute('class','row');
+let div_row_col=new Array(n);
+//配列の要素追加
+for (let i = 0; i < n; i++) {
+    div_row_col[i]=document.createElement('div');
+    div_row_col[i].class="col-sm";
+    div_row_col[i].setAttribute('class',"col-sm");
+    div_row_col[i].textContent=c[i];
+    div_row.appendChild(div_row_col[i]);
+}
+div_container.appendChild(div_row);
 //*棒の追加。
 for(let i=0; i<n; i++){
     //*以下の3文で要素を追加。

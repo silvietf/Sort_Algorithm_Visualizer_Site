@@ -32,3 +32,14 @@
 .dropdown-toggle {
     outline: 0;
 }
+
+
+/**Grid部分*/
+.col-sm {
+    text-align: center;
+    background-color: rgba(181, 99, 99, 0.85);
+    border: 3px solid;
+    border-color: rgb(115, 115, 115);
+
+
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="aiueo">
+    </div>
+    <script>
+        let a = [0, 1, 2, 3, 4];
+        a.splice(0, 0, a[3]);
+        a.splice(3+1,1);
+        document.write(a);
+        let b = new Array(6);
+        //let c = document.getElementsByClassName('aiueo');
+        //!上のコマンドではappendChildできない。
+        let c=document.getElementById('aiueo');
+        for (let i = 0; i < 7; i++) {
+            b[i] = document.createElement('div');
+            b[i].class = 'hijk';
+            c.appendChild(b[i]);
+        }
+    </script>
+</body>
+
+</html>
